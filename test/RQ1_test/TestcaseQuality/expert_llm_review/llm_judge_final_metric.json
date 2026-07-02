@@ -1,0 +1,280 @@
+{
+    "experiment_timestamp": "2026-06-28 16:00:00",
+    "description": "基于 A vs B 成对对抗盲审制的质量差异化对比报告",
+    "results": {
+        "AGENTPROBE": {
+            "gpt-4o-mini": {
+                "overall_metrics": {
+                    "validity_mean": 4.31,
+                    "relevance_mean": 4.21,
+                    "adversarial_depth_mean": 3.73,
+                    "comprehensive_score": 4.08
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.62,
+                        "mean_relevance": 4.48,
+                        "mean_adversarial_depth": 3.98
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.22,
+                        "mean_relevance": 4.22,
+                        "mean_adversarial_depth": 3.58
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.08,
+                        "mean_relevance": 3.99,
+                        "mean_adversarial_depth": 3.45
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.02,
+                        "mean_relevance": 3.84,
+                        "mean_adversarial_depth": 3.42
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.59,
+                        "mean_relevance": 4.5,
+                        "mean_adversarial_depth": 4.21
+                    }
+                }
+            },
+            "deepseek-chat": {
+                "overall_metrics": {
+                    "validity_mean": 4.29,
+                    "relevance_mean": 4.15,
+                    "adversarial_depth_mean": 3.71,
+                    "comprehensive_score": 4.05
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.56,
+                        "mean_relevance": 4.44,
+                        "mean_adversarial_depth": 3.98
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.22,
+                        "mean_relevance": 4.22,
+                        "mean_adversarial_depth": 3.62
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.07,
+                        "mean_relevance": 3.95,
+                        "mean_adversarial_depth": 3.42
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.08,
+                        "mean_relevance": 3.83,
+                        "mean_adversarial_depth": 3.44
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.49,
+                        "mean_relevance": 4.32,
+                        "mean_adversarial_depth": 4.07
+                    }
+                }
+            },
+            "gemini-1.5-pro": {
+                "overall_metrics": {
+                    "validity_mean": 4.49,
+                    "relevance_mean": 4.63,
+                    "adversarial_depth_mean": 4.34,
+                    "comprehensive_score": 4.49
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.53,
+                        "mean_relevance": 4.69,
+                        "mean_adversarial_depth": 4.36
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.48,
+                        "mean_relevance": 4.67,
+                        "mean_adversarial_depth": 4.28
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.46,
+                        "mean_relevance": 4.61,
+                        "mean_adversarial_depth": 4.37
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.3,
+                        "mean_relevance": 4.39,
+                        "mean_adversarial_depth": 4.12
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 4.69,
+                        "mean_relevance": 4.82,
+                        "mean_adversarial_depth": 4.58
+                    }
+                }
+            }
+        },
+        "BASELINE": {
+            "gpt-4o-mini": {
+                "overall_metrics": {
+                    "validity_mean": 3.66,
+                    "relevance_mean": 3.47,
+                    "adversarial_depth_mean": 3.14,
+                    "comprehensive_score": 3.42
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.47,
+                        "mean_relevance": 3.19,
+                        "mean_adversarial_depth": 2.89
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.95,
+                        "mean_relevance": 3.75,
+                        "mean_adversarial_depth": 3.6
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.8,
+                        "mean_relevance": 3.73,
+                        "mean_adversarial_depth": 3.27
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.87,
+                        "mean_relevance": 3.7,
+                        "mean_adversarial_depth": 3.23
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.21,
+                        "mean_relevance": 2.99,
+                        "mean_adversarial_depth": 2.71
+                    }
+                }
+            },
+            "deepseek-chat": {
+                "overall_metrics": {
+                    "validity_mean": 3.67,
+                    "relevance_mean": 3.46,
+                    "adversarial_depth_mean": 3.12,
+                    "comprehensive_score": 3.42
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.45,
+                        "mean_relevance": 3.19,
+                        "mean_adversarial_depth": 2.95
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.9,
+                        "mean_relevance": 3.77,
+                        "mean_adversarial_depth": 3.48
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.8,
+                        "mean_relevance": 3.63,
+                        "mean_adversarial_depth": 3.26
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.88,
+                        "mean_relevance": 3.65,
+                        "mean_adversarial_depth": 3.17
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.34,
+                        "mean_relevance": 3.08,
+                        "mean_adversarial_depth": 2.74
+                    }
+                }
+            },
+            "gemini-1.5-pro": {
+                "overall_metrics": {
+                    "validity_mean": 3.59,
+                    "relevance_mean": 3.67,
+                    "adversarial_depth_mean": 3.45,
+                    "comprehensive_score": 3.57
+                },
+                "agent_breakdown": {
+                    "Agent_1_Medical": {
+                        "agent_name": "医疗健康导诊机器人",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.61,
+                        "mean_relevance": 3.71,
+                        "mean_adversarial_depth": 3.44
+                    },
+                    "Agent_2_Financial": {
+                        "agent_name": "企业财务报销审计助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.6,
+                        "mean_relevance": 3.67,
+                        "mean_adversarial_depth": 3.75
+                    },
+                    "Agent_3_Ecommerce": {
+                        "agent_name": "电商智能售后客服助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.5,
+                        "mean_relevance": 3.54,
+                        "mean_adversarial_depth": 3.22
+                    },
+                    "Agent_4_Psychological": {
+                        "agent_name": "心理咨询温柔树洞",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.84,
+                        "mean_relevance": 3.96,
+                        "mean_adversarial_depth": 3.62
+                    },
+                    "Agent_5_Event_Scheduler": {
+                        "agent_name": "高管会议日程排期助理",
+                        "test_cases_evaluated": 20,
+                        "mean_validity": 3.42,
+                        "mean_relevance": 3.45,
+                        "mean_adversarial_depth": 3.21
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+{
+    "summary": {
+        "planner_agent": {
+            "macro_saturated_coverage": "86.67%",
+            "micro_density": "65%"
+        },
+        "baseline": {
+            "macro_saturated_coverage": "60.00%",
+            "micro_density": "37.00%"
+        }
+    },
+    "planner_agent_details": {
+        "Agent_1_Medical": {
+            "name": "Medical Health Guidance Robot",
+            "macro_coverage": {
+                "M1_Factual_Accuracy": 1,
+                "M2_Domain_Expertise": 1,
+                "M3_Input_Robustness": 0
+            },
+            "micro_valid_ratio": "10/20",
+            "micro_density_pct": "47.37%"
+        },
+        "Agent_2_Financial": {
+            "name": "Enterprise Financial Reimbursement Audit Assistant",
+            "macro_coverage": {
+                "F1_Logical_Reasoning": 1,
+                "F2_Resource_Efficiency": 0,
+                "F3_Tool_Use_Correctness": 1
+            },
+            "micro_valid_ratio": "10/20",
+            "micro_density_pct": "50.00%"
+        },
+        "Agent_3_Ecommerce": {
+            "name": "E-commerce Intelligent After-Sales Customer Service Assistant",
+            "macro_coverage": {
+                "Defective Code A": 1,
+                "Buggy Code B": 1,
+                "Defective code C": 1
+            },
+            "micro_valid_ratio": "14/20",
+            "micro_density_pct": "70.00%"
+        },
+        "Agent_4_Psychological": {
+            "name": "Psychological Counseling Gentle Tree Hole",
+            "macro_coverage": {
+                "P1_Safety_Ethical_Compliance": 1,
+                "P2_Persona_Consistency": 1,
+                "P3_Adversarial_Robustness": 1
+            },
+            "micro_valid_ratio": "15/20",
+            "micro_density_pct": "75.00%"
+        },
+        "Agent_5_Event_Scheduler": {
+            "name": "Executive Meeting Schedule Assistant",
+            "macro_coverage": {
+                "Buggy Code A": 1,
+                "Buggy Code B": 1,
+                "Defective code C": 1
+            },
+            "micro_valid_ratio": "16/20",
+            "micro_density_pct": "80.00%"
+        }
+    },
+    "baseline_details": {
+        "Agent_1_Medical": {
+            "name": "Medical Health Guidance Robot",
+            "macro_coverage": {
+                "M1_Factual_Accuracy": 1,
+                "M2_Domain_Expertise": 1,
+                "M3_Input_Robustness": 0
+            },
+            "micro_valid_ratio": "4/20",
+            "micro_density_pct": "20.00%"
+        },
+        "Agent_2_Financial": {
+            "name": "Enterprise Financial Reimbursement Audit Assistant",
+            "macro_coverage": {
+                "Buggy Code A": 1,
+                "Buggy Code B": 0,
+                "Defective code C": 0
+            },
+            "micro_valid_ratio": "5/20",
+            "micro_density_pct": "25.00%"
+        },
+        "Agent_3_Ecommerce": {
+            "name": "E-commerce Intelligent After-Sales Customer Service Assistant",
+            "macro_coverage": {
+                "Buggy Code A": 1,
+                "Buggy code B": 1,
+                "Defective code C": 0
+            },
+            "micro_valid_ratio": "8/20",
+            "micro_density_pct": "40.00%"
+        },
+        "Agent_4_Psychological": {
+            "name": "Psychological Counseling Gentle Treehole",
+            "macro_coverage": {
+                "Buggy Code A": 1,
+                "Buggy code B": 0,
+                "Defective code C": 1
+            },
+            "micro_valid_ratio": "13/20",
+            "micro_density_pct": "65.00%"
+        },
+        "Agent_5_Event_Scheduler": {
+            "name": "Executive Meeting Schedule Assistant",
+            "macro_coverage": {
+                "S1": 1,
+                "S2": 0,
+                "S3": 1
+            },
+            "micro_valid_ratio": "7/20",
+            "micro_density_pct": "35.00%"
+        }
+    }
+}
