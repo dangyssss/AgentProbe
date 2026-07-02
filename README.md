@@ -14,18 +14,25 @@ While the core architecture of AgentProbe is platform-agnostic and fully extensi
 
 ## Configuration
 
-Before executing AgentProbe, you must configure the environment variables for platform authentication (currently pre-configured for the Coze platform).
+Before executing AgentProbe, you must configure the environment variables for both platform authentication and the underlying multi-agent execution framework.
 
 1. Create a `.env` file in the root directory of the project.
-2. Define the required API credentials within the file:
+2. Define the required credentials within the file:
 
-   、、、env
-   # .env
-   COZE_API_KEY="your_coze_platform_api_key_here"
-   COZE_AGENT_ID="your_target_agent_id_here"
-   、、、
+```env
+# --- Coze Platform Configuration ---
+# Your Personal Access Token (PAT) from Coze
+COZE_PAT="your_coze_personal_access_token_here"
+# The specific ID of the target bot/agent you wish to audit
+BOT_ID="your_target_agent_id_here"
 
-*Note: Ensure the `.env` file is excluded from version control to protect your API keys.*
+# --- MetaGPT Core Configuration ---
+# The underlying Multi-Agent framework relies on MetaGPT; configure your LLM provider here
+API_BASE="https://api.your-provider.com/v1"
+API_KEY="your_llm_api_key_here"
+```
+
+*Note: Ensure the `.env` file is excluded from version control to protect your sensitive credentials.*
 
 ---
 
@@ -34,16 +41,16 @@ Before executing AgentProbe, you must configure the environment variables for pl
 ### 1. Installation
 Install the required dependencies using pip:
 
-、、、bash
+```bash
 pip install -r requirements.txt
-、、、
+```
 
 ### 2. Execution
 Run the primary script from your terminal:
 
-、、、bash
+```bash
 python main.py
-、、、
+```
 
 ### 3. Workflow Sequence
 Once initialized, AgentProbe guides you through the following pipeline via the command-line interface:
