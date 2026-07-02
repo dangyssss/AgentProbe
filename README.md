@@ -1,5 +1,3 @@
-# AgentProbe
-
 # AgentProbe: LCNC Agent Automated Evaluation Framework
 
 AgentProbe is an automated testing and evaluation framework designed for Low-Code/No-Code (LCNC) agents. The framework addresses the evaluation gap faced by end-user developers by streamlining the workflow from requirement input to quantitative performance reporting. 
