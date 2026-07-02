@@ -1,0 +1,4 @@
+metagpt
+python-dotenv
+requests
+aiohttp
