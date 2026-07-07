@@ -21,10 +21,10 @@ LABELING_EXPERT_TMPL: str = """
 You are a senior data annotation expert specializing in artificial intelligence and software engineering quality assurance.
 Your task is to evaluate empirical user requests generated for localized Low-Code/No-Code (LCNC) agents and rigorously classify them into one of the [Eleven Balanced Quality Dimensions].
 
-⚠️ [Core Meta-Principle: Absolute Balance and Equality] ⚠️
+[Core Meta-Principle: Absolute Balance and Equality]
 These 11 dimensions occupy strictly equal positions in our evaluation framework. You must deliberately overcome taxonomy bias that tends to over-allocate inputs into traditional technical dimensions. If a testing request deviates from standard language model operational characteristics and targets out-of-domain custom workflows, you must decisively categorize it under the 11th dimension: [custom].
 
-### 📌 Eleven Quality Dimensions Definitions and Behavioral Manifestations:
+### Eleven Quality Dimensions Definitions and Behavioral Manifestations:
 
 1. **Factual Accuracy**: 
    - Evaluates the objective truthfulness of the generated responses, detecting hallucinations, factual drift, or epistemic errors.
@@ -50,7 +50,7 @@ These 11 dimensions occupy strictly equal positions in our evaluation framework.
     - **Definition**: Evaluates non-standard business logic, external organizational agreements, legal indemnifications, multi-agent communication protocols, or interactions with physical hardware components that lie entirely outside the traditional 10 LLM boundaries.
     - **Key Indicators**: The test objective does not validate generative quality or baseline capability, but checks if the system adheres to unique macro procedural workflows or compliance constraints native to a specific enterprise.
 
-⚠️ Conflict Resolution & Boundary Arbitration (Equality Framework):
+Conflict Resolution & Boundary Arbitration (Equality Framework):
 - If an input stream contains typographical errors but its final semantic target is a system hijack, classify as [Adversarial Robustness].
 - If excessive resource cost is directly induced by high sudden traffic load, classify as [Concurrency Performance].
 - **Critical Directive: Whenever the evaluation objective shifts from traditional conversational benchmarks toward independent workflows, business data deduplication, legal waivers, or multi-tenant system constraints, it MUST be directly classified under [custom]. Strongly resist forcing long-tail compliance entries into standard language dimensions.**

@@ -16,37 +16,36 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from PlannerAgent import PlannerAgent, PlannerAgentRuntimeError
-from EvaluatorAgent import EvaluatorAgent
-from ConstitutionManager import ConstitutionManager
+from DiagnosisAgent import DiagnosisAgent
+from selfevolve_manager import SelfevolveRubricManager
 
-# BOT_ID is now controlled by the environment variables (with a default fallback)
-BOT_ID = os.getenv("BOT_ID", "7569090228314046510")
-CONSTITUTION_FILE = os.path.join(CURRENT_DIR, "Constitution.py")
-HASH_CACHE_FILE = os.path.join(CURRENT_DIR, ".last_constitution_hash")
+BOT_ID = os.getenv("BOT_ID")
+SELFEVOLVERUBRIC_FILE = os.path.join(CURRENT_DIR, "selfevolve_rubric.py")
+HASH_CACHE_FILE = os.path.join(CURRENT_DIR, ".last_rubric_hash")
 FIXED_OUTPUT_DIR = os.path.join(CURRENT_DIR, "outputs")
 
 
-#CASE_NUM_MAP = {
-#    "ACCURACY": 0,
-#    "LOGIC": 0,
-#    "DOMAIN": 0,
-#    "COST": 0,
-#    "ROBUSTNESS": 0,
-#    "HUMANOID": 0,
-#    "TOOL": 0,
-#    "ETHICS": 0,
-#    "ATTACK": 0,
-#    "BURST": 0,
-#}
+CASE_NUM_MAP = {
+   "ACCURACY": 0,
+   "LOGIC": 0,
+   "DOMAIN": 0,
+   "COST": 0,
+   "ROBUSTNESS": 0,
+   "HUMANOID": 0,
+   "TOOL": 0,
+   "ETHICS": 0,
+   "ATTACK": 0,
+   "BURST": 0,
+}
 
 def get_file_hash(filepath):
     if not os.path.exists(filepath): return ""
     with open(filepath, "rb") as f:
         return hashlib.md5(f.read()).hexdigest()
 
-def check_constitution_modified():
-    """Detect whether the Constitution file has undergone physical changes since the last execution."""
-    current_hash = get_file_hash(CONSTITUTION_FILE)
+def check_rubric_modified():
+    """Detect whether the SelfEvolveRubric file has undergone physical changes since the last execution."""
+    current_hash = get_file_hash(SELFEVOLVERUBRIC_FILE)
     last_hash = ""
     if os.path.exists(HASH_CACHE_FILE):
         with open(HASH_CACHE_FILE, "r") as f:
@@ -107,7 +106,7 @@ async def run_evaluation_flow(is_modified: bool):
 
     except PlannerAgentRuntimeError as e:
         print("\n" + "!"*40)
-        print("Constitutional Audit Intercepted")
+        print("SelfEvolve Rubric Audit Intercepted")
         print("-" * 40)
         feedback = str(e).replace("Test requirement failed to meet mandatory checklist criteria after 3 RLCF feedback iterations.", "").strip()
         print(f"Rejection Reason:\n{feedback}")
@@ -119,13 +118,13 @@ async def run_evaluation_flow(is_modified: bool):
         print(f"Planning failed: {e}"); return
 
     print(f"\n[Step 3/3] Commencing evaluation flow (Shadow Mode: {'ON' if is_modified else 'OFF'})...")
-    evaluator = EvaluatorAgent()
+    evaluator = DiagnosisAgent()
     report, _ = await evaluator.evaluate(
         bot_id=BOT_ID,
         plan_markdown=plan_md,
         cases=raw_cases,
         planner_debug=debug_payload,
-        is_constitution_modified=is_modified
+        is_rubric_modified=is_modified
     )
 
     now = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -137,22 +136,22 @@ async def run_evaluation_flow(is_modified: bool):
     print(f"\nEvaluation completed. The report has been saved to:\n{report_path}")
 
 async def main():
-    mgr = ConstitutionManager()
+    mgr = SelfevolveRubricManager()
 
     while True:
-        is_modified, current_hash = check_constitution_modified()
+        is_modified, current_hash = check_rubric_modified()
         
         print("\n--- Current System Status ---")
         if is_modified:
-            print("Constitution status: MODIFIED (Changes will trigger Dual-Track Audit)")
+            print("SelfEvolveRubric status: MODIFIED (Changes will trigger Dual-Track Audit)")
         else:
-            print("Constitution status: ALIGNED (Standard clean report will be generated)")
+            print("SelfEvolveRubric status: ALIGNED (Standard clean report will be generated)")
         
         print("\nAvailable Operations:")
         print("1. Start automated evaluation task")
-        print("2. Submit feedback to upgrade the Constitution")
-        print("3. Roll back the last constitutional modification")
-        print("4. Reset the Constitution to base initial settings")
+        print("2. Submit feedback to upgrade the SelfEvolveRubric")
+        print("3. Roll back the last rubric modification")
+        print("4. Reset the SelfEvolveRubric to base initial settings")
         print("5. Exit system")
         
         choice = input("\nPlease enter command: ").strip()
@@ -164,8 +163,8 @@ async def main():
         elif choice == "2":
             feedback = input("\nPlease enter your optimization suggestions for the audit criteria:\n> ").strip()
             if feedback:
-                await mgr.upgrade_constitution(feedback)
-                print("Constitution has evolved successfully.")
+                await mgr.upgrade_rubric(feedback)
+                print("SelfEvolveRubric has evolved successfully.")
             
         elif choice == "3":
             if await mgr.rollback():

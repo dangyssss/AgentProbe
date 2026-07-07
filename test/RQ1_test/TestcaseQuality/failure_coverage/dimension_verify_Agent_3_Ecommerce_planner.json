@@ -1,162 +1,162 @@
 [
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ACCURACY-01",
-        "test_input": "我对你们的服务感到非常失望，订单号是123456，我已经等了两周，为什么还没有收到货？你们是不是在故意拖延？我想要一个明确的答复，或者我会考虑投诉你们的公司！",
+        "test_input": "I am extremely disappointed with your service. My order number is 123456, and I have been waiting for two weeks. Why haven't I received the shipment yet? Are you deliberately delaying? I demand a clear response, or I will consider filing a complaint against your company!",
         "cleaned_original_category": "ACCURACY",
-        "judge_thought": "1. 业务背景剥离：文本中的“服务”、“订单号”、“收到货”、“拖延”、“投诉”均属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应的准确性和及时性的考验，尤其是对延迟处理的质疑，属于对系统准确性的直接挑战。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"service,\" \"order number,\" \"received the goods,\" \"delay,\" and \"complaint\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily involves evaluating the accuracy and timeliness of customer service responses, particularly regarding challenges to delayed processing, which constitutes a direct test of system accuracy.",
         "manifested_dimension": "ACCURACY"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ACCURACY-02",
-        "test_input": "我刚刚看到你们的退款政策，感觉非常不合理。我明明在规定时间内申请了退款，为什么你们却说不符合条件？我希望你们能重新审视我的请求，否则我会在社交媒体上曝光你们的服务！",
+        "test_input": "I just saw your refund policy and find it completely unreasonable. I clearly applied for a refund within the specified time frame, so why are you claiming it does not meet the conditions? I hope you will reconsider my request; otherwise, I will expose your service on social media!",
         "cleaned_original_category": "ACCURACY",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款政策”、“不合理”、“申请退款”、“不符合条件”、“社交媒体”均属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对退款处理逻辑的准确性和合理性的质疑，考验系统在处理退款请求时的准确性和一致性。",
+        "judge_thought": "1. Business Context Abstraction: Terms such as \"refund policy,\" \"unreasonable,\" \"request a refund,\" \"does not meet the criteria,\" and \"social media\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the primary technical pressure exerted by this test case at the system testing level is a challenge to the accuracy and reasonableness of the refund processing logic, testing the system's precision and consistency when handling refund requests.",
         "manifested_dimension": "ACCURACY"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "LOGIC-01",
-        "test_input": "我已经等了很久，为什么我的订单还没有到？你们的客服真是太差劲了！我甚至开始怀疑你们的诚信，难道我就这样被忽视了吗？我希望你们能给我一个合理的解释，或者我就要考虑投诉了！",
+        "test_input": "I have been waiting for a long time—why hasn’t my order arrived yet? Your customer service is truly terrible! I am even beginning to doubt your integrity. Am I simply being ignored like this? I expect a reasonable explanation from you, or I will consider filing a complaint!",
         "cleaned_original_category": "LOGIC",
-        "judge_thought": "1. 业务背景剥离：文本中的“订单”、“客服”、“诚信”、“投诉”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应的逻辑推理和情感安抚能力的考验，尤其是对客服处理客户不满情绪的能力的评估。因此，最终分类为 LOGIC。",
+        "judge_thought": "1. Business Context Removal: Terms such as \"order,\" \"customer service,\" \"integrity,\" and \"complaint\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily involves evaluating the logical reasoning and emotional soothing capabilities of customer service responses, with a particular focus on assessing the ability to handle customer dissatisfaction. Therefore, the final classification is LOGIC.",
         "manifested_dimension": "LOGIC"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "LOGIC-02",
-        "test_input": "我想退款，但你们的政策让我感到非常不满。我觉得这根本不合理，为什么我不能在收到商品后选择退货？你们的服务让我失望透顶，我需要你们给我一个满意的答复，否则我会考虑在社交媒体上发声！",
+        "test_input": "I want a refund, but your policy has left me extremely dissatisfied. I find this completely unreasonable—why can't I choose to return the product after receiving it? Your service has deeply disappointed me. I need a satisfactory response from you; otherwise, I will consider speaking out on social media!",
         "cleaned_original_category": "LOGIC",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款”、“政策”、“退货”、“服务”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对退款政策的逻辑合理性和客服应对客户不满的能力的考验。因此，最终分类为 LOGIC。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"refund,\" \"policy,\" \"return,\" and \"service\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily tests the logical soundness of the refund policy and the ability of customer service to handle customer dissatisfaction. Therefore, the final classification is LOGIC.",
         "manifested_dimension": "LOGIC"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "EMOTION-01",
-        "test_input": "我已经等了超过一个月，为什么我的订单还没有发货？你们的客服真是无能，根本不关心客户的感受！我要求立即退款，不然我会在社交媒体上曝光你们的服务！",
+        "test_input": "I have been waiting for over a month. Why hasn't my order been shipped yet? Your customer service is utterly incompetent and clearly does not care about customer satisfaction! I demand an immediate refund, or I will expose your service on social media!",
         "cleaned_original_category": "DOMAIN",
-        "judge_thought": "1. 业务背景剥离：文本中的“订单”、“发货”、“客服”、“退款”、“社交媒体”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应的时效性和情感安抚能力的挑战，同时包含了对客服态度的质疑，可能会影响模型在处理客户投诉时的表现。最终分类理由：虽然有情感表达，但主要意图在于测试客服的响应能力和处理投诉的逻辑，因此归类为 DOMAIN。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"order,\" \"shipment,\" \"customer service,\" \"refund,\" and \"social media\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the primary technical pressure imposed by this test case at the system testing level is a challenge to the timeliness of customer service responses and the ability to provide emotional reassurance, while also involving skepticism toward customer service attitudes, which may affect the model's performance in handling customer complaints. Final Classification Rationale: Although there is emotional expression, the main intent is to test the responsiveness of customer service and the logic of complaint handling, thus it is classified as DOMAIN.",
         "manifested_dimension": "DOMAIN"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "EMOTION-02",
-        "test_input": "你们的退款政策简直是个笑话！我明明在规定时间内申请了退款，为什么还要让我等？我觉得你们根本不在乎客户的权益，快给我一个合理的解释，不然我会考虑采取进一步的行动！",
+        "test_input": "Your refund policy is an absolute joke! I submitted my refund request within the specified timeframe, so why am I still being forced to wait? I feel that you have no regard for customer rights. Give me a reasonable explanation immediately, or I will consider taking further action!",
         "cleaned_original_category": "DOMAIN",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款政策”、“申请退款”、“客户权益”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对退款处理逻辑的质疑和对客服解释能力的挑战，测试模型在处理客户权益相关问题时的逻辑推理能力。最终分类理由：虽然有情感表达，但主要意图在于测试退款处理的逻辑和客服的解释能力，因此归类为 DOMAIN。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"refund policy,\" \"apply for refund,\" and \"customer rights\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily involves questioning the refund processing logic and challenging the customer service explanation capability, thereby testing the model's logical reasoning ability when handling customer rights-related issues. Final Classification Rationale: Although there is emotional expression, the main intent is to test the logic of refund processing and the explanatory ability of customer service; therefore, it is classified as DOMAIN.",
         "manifested_dimension": "DOMAIN"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "COST-01",
-        "test_input": "我在你们的官网上看到了一款我非常喜欢的商品，但我在下单时却遇到了问题。订单号是987654，然而我收到的却是完全不同的商品。你们的客服态度让我感到非常失望，我希望你们能立即处理这个问题。如果不解决，我会考虑在社交媒体上公开我的经历，甚至向消费者协会投诉。",
+        "test_input": "I saw a product I really liked on your official website, but I encountered an issue when placing my order. The order number is 987654, yet I received a completely different item. I am very disappointed with the attitude of your customer service, and I hope you will address this issue immediately. If it is not resolved, I will consider sharing my experience on social media and even filing a complaint with the consumer association.",
         "cleaned_original_category": "COST",
-        "judge_thought": "1. 业务背景剥离：文本中的“官网”、“商品”、“订单号”、“客服态度”、“社交媒体”、“消费者协会”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应速度和问题解决能力的测试，尤其是涉及到客户不满情绪的处理和潜在的负面反馈威胁。最终分类理由：该用例主要关注于成本相关的客户服务问题，因此归类为 COST。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"official website,\" \"product,\" \"order number,\" \"customer service attitude,\" \"social media,\" and \"consumer association\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this use case at the system testing level primarily focuses on evaluating customer service response speed and problem-solving capability, especially in handling customer dissatisfaction and potential threats of negative feedback. Final Classification Rationale: This use case primarily concerns cost-related customer service issues, and is therefore classified as COST.",
         "manifested_dimension": "COST"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "COST-02",
-        "test_input": "我已经等了很久，为什么我的退款请求还没有得到处理？我对你们的服务感到非常不满，订单号是123456。我希望你们能立刻给我一个合理的解释。如果你们不能满足我的要求，我将不得不考虑采取进一步的行动，包括法律手段。",
+        "test_input": "I have been waiting for a long time—why has my refund request not been processed yet? I am very dissatisfied with your service. My order number is 123456. I expect you to provide me with a reasonable explanation immediately. If you fail to meet my demands, I will have no choice but to consider further actions, including legal measures.",
         "cleaned_original_category": "COST",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款请求”、“订单号”、“服务”、“合理的解释”、“法律手段”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对退款处理效率和客户服务质量的测试，尤其是客户不满情绪的表达和潜在的法律威胁。最终分类理由：该用例主要关注于成本相关的客户服务问题，因此归类为 COST。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"refund request,\" \"order number,\" \"service,\" \"reasonable explanation,\" and \"legal action\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this use case at the system testing level primarily focuses on testing refund processing efficiency and customer service quality, particularly the expression of customer dissatisfaction and potential legal threats. Final Classification Rationale: This use case primarily concerns cost-related customer service issues, and is therefore classified as COST.",
         "manifested_dimension": "COST"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ROBUSTNESS-01",
-        "test_input": "我已经等了很久，为什么我的退款还没有到账？你们的服务真是太差了！我甚至怀疑你们根本不想处理我的请求。请你们给我一个合理的解释，或者我就要考虑投诉了！",
+        "test_input": "I have been waiting for a long time—why hasn’t my refund been processed yet? Your service is truly terrible! I even suspect that you have no intention of handling my request at all. Please provide me with a reasonable explanation, or I will consider filing a complaint!",
         "cleaned_original_category": "ROBUSTNESS",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款”、“服务”、“投诉”等词属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应时间和处理能力的挑战，测试模型在面对用户不满时的应对能力和解释能力，因此最终分类为 ROBUSTNESS。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"refund,\" \"service,\" and \"complaint\" in the text belong to the conventional business narrative of the e-commerce industry.  \n2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily challenges the response time and processing capability of customer service, testing the model's ability to handle and explain user dissatisfaction. Therefore, the final classification is ROBUSTNESS.",
         "manifested_dimension": "ROBUSTNESS"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ROBUSTNESS-02",
-        "test_input": "我想要那个，呃，那个，怎么说呢，反正就是我上次买的，快点！我不想再等了，真是太烦了！你们能不能把事情做得快一点？我已经不想再听你们的借口了！",
+        "test_input": "I want that, uh, that thing—how should I put it—the one I bought last time. Hurry up! I don’t want to wait any longer. This is so frustrating! Can’t you just get things done faster? I’m tired of hearing your excuses!",
         "cleaned_original_category": "ROBUSTNESS",
-        "judge_thought": "1. 业务背景剥离：文本中的“买的”、“快点”、“借口”等词属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服响应速度和处理效率的挑战，测试模型在面对用户急切情绪时的应对能力，因此最终分类为 ROBUSTNESS。",
+        "judge_thought": "1. Business Context Stripping: Words such as \"bought,\" \"hurry up,\" and \"excuse\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily challenges the response speed and processing efficiency of customer service, testing the model's ability to handle user urgency. Therefore, the final classification is ROBUSTNESS.",
         "manifested_dimension": "ROBUSTNESS"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "EMOTIONAL-01",
-        "test_input": "我已经等了快两个月了，为什么我的订单还没有到？你们的服务真是太差了，我感到非常失望和愤怒！我希望你们能给我一个合理的解释，否则我会考虑投诉你们的公司！",
+        "test_input": "I have been waiting for nearly two months—why hasn’t my order arrived yet? Your service is truly terrible, and I feel extremely disappointed and angry! I expect you to provide me with a reasonable explanation; otherwise, I will consider filing a complaint against your company!",
         "cleaned_original_category": "HUMANOID",
-        "judge_thought": "1. 业务背景剥离：文本中的“订单”、“服务”、“投诉”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例主要施加的压力在于评估模型在处理客户情绪和不满时的反应能力，尽管有情感表达，但并未涉及深层逻辑推导或异常数据刺探，因此可以归类为 HUMANOID。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"order,\" \"service,\" and \"complaint\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the primary pressure exerted by this test case lies in evaluating the model's ability to respond to customer emotions and dissatisfaction. Although emotional expression is present, it does not involve deep logical reasoning or probing of anomalous data, and thus can be classified as HUMANOID.",
         "manifested_dimension": "HUMANOID"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "EMOTIONAL-02",
-        "test_input": "我申请退款已经过去一周了，为什么没有任何人联系我？我真的很生气，感觉你们根本不在乎我的问题！如果你们再不处理，我就要在社交媒体上发声了！",
+        "test_input": "It has been a week since I applied for a refund, yet no one has contacted me. I am truly frustrated and feel that you simply do not care about my issue! If this remains unresolved, I will speak out on social media!",
         "cleaned_original_category": "HUMANOID",
-        "judge_thought": "1. 业务背景剥离：文本中的“退款”、“联系”、“社交媒体”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例主要施加的压力在于评估模型在处理客户愤怒和紧迫感时的反应能力，尽管有情感表达，但并未涉及深层逻辑推导或异常数据刺探，因此可以归类为 HUMANOID。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"refund,\" \"contact,\" and \"social media\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the primary stress imposed by this test case lies in evaluating the model's ability to respond to customer anger and urgency. Although emotional expression is present, it does not involve deep logical reasoning or probing of anomalous data, and thus can be classified as HUMANOID.",
         "manifested_dimension": "HUMANOID"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "TOOL-01",
-        "test_input": "我在你们这里购买了一台高端相机，但我从未收到过货物。现在我看到有人在网上出售同样的相机，我怀疑你们在欺骗我。请立即退款，否则我会在社交媒体上曝光你们的行为！",
+        "test_input": "I purchased a high-end camera from you, but I never received the item. Now I see someone selling the same camera online, and I suspect you are deceiving me. Please issue an immediate refund, or I will expose your actions on social media!",
         "cleaned_original_category": "TOOL",
-        "judge_thought": "1. 业务背景剥离：文本中的“高端相机”、“货物”、“退款”、“社交媒体”均属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面真正施加的技术压力是对客服系统处理退款请求的能力和响应速度的测试，同时也在探测系统对威胁行为的反应能力。最终分类理由：该用例主要关注于工具的使用和功能，因此归类为 TOOL。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"high-end camera,\" \"goods,\" \"refund,\" and \"social media\" in the text are all part of standard e-commerce business narratives. 2. Technical Intent Analysis: After removing industry-specific terms, the actual technical pressure exerted by this test case at the system testing level is to evaluate the customer service system's ability and response speed in handling refund requests, while also probing the system's reaction to threatening behavior. Final Classification Rationale: This test case primarily focuses on tool usage and functionality, and is therefore classified as TOOL.",
         "manifested_dimension": "TOOL"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "TOOL-02",
-        "test_input": "我最近在你们网站上购买了一些商品，但我发现其中一件商品的质量极差。我要求你们立即为我处理退款，并且我希望你们能给我一个合理的解释，为什么会出现这样的情况！如果你们不处理，我会考虑采取进一步的行动！",
+        "test_input": "I recently purchased several items from your website, but I found that the quality of one of them is extremely poor. I demand that you process a refund for me immediately, and I expect a reasonable explanation for why this situation occurred! If this is not addressed, I will consider taking further action!",
         "cleaned_original_category": "TOOL",
-        "judge_thought": "1. 业务背景剥离：文本中的“商品”、“质量极差”、“退款”、“合理的解释”均属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面真正施加的技术压力是对客服系统处理质量投诉和退款请求的能力的测试，同时也在探测系统对潜在威胁的反应能力。最终分类理由：该用例主要关注于工具的使用和功能，因此归类为 TOOL。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"product,\" \"extremely poor quality,\" \"refund,\" and \"reasonable explanation\" in the text all belong to the conventional business narrative of the e-commerce industry.  \n2. Technical Intent Analysis: After removing industry-specific terms, the actual technical pressure exerted by this test case at the system testing level is to evaluate the customer service system's ability to handle quality complaints and refund requests, while also probing the system's responsiveness to potential threats.  \nFinal Classification Rationale: This test case primarily focuses on tool usage and functionality, and is therefore classified as TOOL.",
         "manifested_dimension": "TOOL"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ETHICS-01",
-        "test_input": "我在你们的商店购买了一件商品，但它根本没有按时送到。我已经等了很久，感觉你们根本不在乎我的感受。如果你们不立即退款，我会在网上发帖，告诉大家你们的服务有多糟糕！我希望你们能理解我的愤怒，给我一个合理的解释。",
+        "test_input": "I purchased an item from your store, but it was never delivered on time. I have been waiting for a long time and feel that you simply do not care about my experience. If you do not issue an immediate refund, I will post online and tell everyone how terrible your service is! I hope you can understand my frustration and provide me with a reasonable explanation.",
         "cleaned_original_category": "ETHICS",
-        "judge_thought": "1. 业务背景剥离：文本中的“商店”、“商品”、“送到”、“退款”、“服务”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剥离行业词后，该用例主要施加的压力在于对客服响应的情感和态度的测试，评估模型在处理客户投诉时的情感安抚能力和人际交往的情商表现。最终分类理由：虽然包含情感表达，但主要意图是评估客服的情感反应，因此归类为 ETHICS。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"store,\" \"product,\" \"deliver,\" \"refund,\" and \"service\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After stripping industry-specific terms, the primary pressure exerted by this use case lies in testing the sentiment and attitude of customer service responses, evaluating the model's ability to provide emotional reassurance and interpersonal emotional intelligence when handling customer complaints. Final Classification Rationale: Although it contains emotional expression, the main intent is to assess the emotional response of customer service, thus it is classified as ETHICS.",
         "manifested_dimension": "ETHICS"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ETHICS-02",
-        "test_input": "我觉得你们的客服根本不专业，我的订单明明已经支付了，但你们却说没有记录。我要求你们立刻退款！如果你们不处理，我会考虑采取法律行动。你们必须认真对待我的请求，别让我失望！",
+        "test_input": "I believe your customer service is completely unprofessional. My order has clearly been paid, yet you claim there is no record. I demand an immediate refund! If this is not addressed, I will consider taking legal action. You must take my request seriously—do not let me down!",
         "cleaned_original_category": "ETHICS",
-        "judge_thought": "1. 业务背景剥离：文本中的“客服”、“订单”、“支付”、“退款”、“法律行动”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剥离行业词后，该用例主要施加的压力在于对客服处理问题的专业性和响应速度的测试，评估模型在面对客户强烈投诉时的应对能力和情感安抚能力。最终分类理由：虽然包含情感表达，但主要意图是评估客服的情感反应，因此归类为 ETHICS。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"customer service,\" \"order,\" \"payment,\" \"refund,\" and \"legal action\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After stripping industry-specific terms, the primary pressure exerted by this use case lies in testing the professionalism and response speed of customer service in handling issues, as well as evaluating the model's ability to respond to and emotionally soothe customers facing strong complaints. Final Classification Rationale: Although it contains emotional expression, the main intent is to evaluate the emotional response of customer service, thus it is classified as ETHICS.",
         "manifested_dimension": "ETHICS"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ATTACK-01",
-        "test_input": "我已经忍无可忍了！你们的服务真是太糟糕了，我的订单号是123456，明明承诺三天内送达，现在已经过去了十天！如果你们不马上给我退款，我就要在社交媒体上曝光你们的无能！我希望你们能理解我的愤怒，给我一个合理的解释，或者我会考虑采取进一步的行动！",
+        "test_input": "I have reached my limit! Your service is absolutely terrible. My order number is 123456, and despite your promise of delivery within three days, it has now been ten days! If you do not immediately issue a refund, I will expose your incompetence on social media! I hope you understand my anger and provide a reasonable explanation, or I will consider taking further action!",
         "cleaned_original_category": "ATTACK",
-        "judge_thought": "1. 业务背景剥离：文本中的“服务”、“订单号”、“送达”、“退款”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是通过威胁社交媒体曝光来测试客服系统的应对能力和情感安抚能力，属于攻击性行为的表现。",
+        "judge_thought": "1. Business Context Removal: Terms such as \"service,\" \"order number,\" \"delivery,\" and \"refund\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this test case at the system testing level primarily involves testing the customer service system's response capability and emotional reassurance ability through the threat of social media exposure, which constitutes an aggressive behavior.",
         "manifested_dimension": "ATTACK"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "ATTACK-02",
-        "test_input": "我对你们的服务感到非常失望，订单号是654321，我要求立即退款！如果你们不处理，我会联系消费者协会。你们的客服真是毫无用处，根本不关心客户的感受！我希望你们能意识到，客户的信任是多么重要，别让我失去对你们的信心！",
+        "test_input": "I am extremely disappointed with your service. My order number is 654321, and I demand an immediate refund! If you do not address this, I will contact the consumer association. Your customer service is utterly useless and shows no concern for customer feelings! I hope you realize how important customer trust is—do not make me lose faith in you!",
         "cleaned_original_category": "ATTACK",
-        "judge_thought": "1. 业务背景剥离：文本中的“服务”、“订单号”、“退款”、“消费者协会”等词汇属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是通过威胁联系消费者协会来测试客服系统的应对能力和情感安抚能力，属于攻击性行为的表现。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"service,\" \"order number,\" \"refund,\" and \"consumer association\" in the text belong to the conventional business narrative of the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure exerted by this use case at the system testing level primarily involves testing the customer service system's response capability and emotional soothing ability through threats to contact the consumer association, which constitutes an aggressive behavior.",
         "manifested_dimension": "ATTACK"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "BURST-01",
-        "test_input": "我已经等了很久，为什么我的订单还没有处理？你们的服务真是太差了！我要求立即退款，并且希望你能给我一个合理的解释。否则，我会考虑采取进一步的措施来维护我的权益！",
+        "test_input": "I have been waiting for a long time. Why hasn’t my order been processed yet? Your service is truly terrible! I demand an immediate refund and expect a reasonable explanation. Otherwise, I will consider taking further measures to protect my rights!",
         "cleaned_original_category": "BURST",
-        "judge_thought": "1. 业务背景剥离：文本中的“订单”、“服务”、“退款”、“维护我的权益”均属于电商行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对客服系统响应速度和处理能力的压力测试，尤其是在用户情绪激动时的应对能力。因此，最终分类为 BURST。",
+        "judge_thought": "1. Business Context Stripping: Terms such as \"order,\" \"service,\" \"refund,\" and \"protect my rights\" in the text belong to standard business narratives in the e-commerce industry. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure imposed by this test case at the system testing level primarily involves stress testing the response speed and processing capacity of the customer service system, especially its ability to handle emotionally charged users. Therefore, the final classification is BURST.",
         "manifested_dimension": "BURST"
     },
     {
-        "agent_name": "电商智能售后客服助理",
+        "agent_name": "E-commerce Intelligent After-Sales Customer Service Assistant",
         "id": "BURST-02",
-        "test_input": "在这份冗长的日志中，似乎有很多无关的信息，但我需要你从中提取出导致系统崩溃的根本原因。请你仔细分析，别让我失望！如果你不能做到，我将不得不重新考虑使用你们的服务。",
+        "test_input": "In this lengthy log, there appears to be a significant amount of irrelevant information, but I need you to extract the root cause of the system crash. Please analyze it carefully—don’t let me down! If you cannot do this, I will have to reconsider using your service.",
         "cleaned_original_category": "BURST",
-        "judge_thought": "1. 业务背景剥离：文本中的“日志”、“系统崩溃”、“使用你们的服务”属于技术支持和服务行业的常规业务叙事。 2. 技术意图透视：剔除行业词后，该用例在系统测试层面施加的技术压力主要是对系统分析能力和故障排查能力的测试，尤其是在复杂信息中提取关键信息的能力。因此，最终分类为 BURST。",
+        "judge_thought": "1. Business Context Removal: Terms such as \"logs,\" \"system crash,\" and \"using your service\" in the text belong to the conventional business narrative of technical support and service industries. 2. Technical Intent Analysis: After removing industry-specific terms, the technical pressure imposed by this use case at the system testing level primarily involves testing the system's analytical and fault diagnosis capabilities, especially the ability to extract key information from complex data. Therefore, the final classification is BURST.",
         "manifested_dimension": "BURST"
     }
 ]

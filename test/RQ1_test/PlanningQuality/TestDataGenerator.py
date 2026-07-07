@@ -18,7 +18,7 @@ def load_external_agent_profiles(file_name: str = "agent_profiles.json") -> Dict
         try:
             return json.load(f)
         except json.JSONDecodeError as e:
-            sys.stderr.write(f"Critical Error: Failed to deserialize JSON dataset -> {e}\n")
+            sys.stderr.write(f"Critical Error: Failed to deserialize JSON dataset {e}\n")
             sys.exit(1)
 
 def extract_json(text: str) -> str:

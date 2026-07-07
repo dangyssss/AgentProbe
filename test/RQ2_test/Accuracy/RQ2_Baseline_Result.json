@@ -1,0 +1,7 @@
+{
+    "summary": {
+        "total_cases": 100,
+        "total_correct": 74,
+        "baseline_accuracy": "74.00%"
+    }
+}

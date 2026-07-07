@@ -12,7 +12,7 @@ def main():
     input_file = os.path.join(CURRENT_DIR, "llm_judge_final_metric.json")
 
     if not os.path.exists(input_file):
-        print(f"[Error] Target evaluation report missing at {input_file}. Please run the evaluator pipeline first.")
+        print(f"Target evaluation report missing at {input_file}. Please run the evaluator pipeline first.")
         return
 
     with open(input_file, "r", encoding="utf-8") as f:
@@ -29,12 +29,8 @@ def main():
         'adversarial_depth_mean': 'Adversarial Depth'
     }
 
-    print("\n" + "="*70)
     print("Multi-Judge Evaluation - Macro Metrics Summary Board (Likert 1-5)")
-    print("=================================================================")
 
-    print(f"{'Metric':<30} | {'AGENTPROBE (Ours)':<18} | {'BASELINE':<10}")
-    print("-"*70)
 
     for metric_key, metric_name in metrics_map.items():
         ap_avg = np.mean([agentprobe_data[j]['overall_metrics'][metric_key] for j in judges if j in agentprobe_data])

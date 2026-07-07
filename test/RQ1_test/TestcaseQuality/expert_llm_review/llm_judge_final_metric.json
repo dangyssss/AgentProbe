@@ -1,6 +1,5 @@
 {
     "experiment_timestamp": "2026-06-28 16:00:00",
-    "description": "基于 A vs B 成对对抗盲审制的质量差异化对比报告",
     "results": {
         "AGENTPROBE": {
             "gpt-4o-mini": {
