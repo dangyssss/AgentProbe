@@ -119,7 +119,7 @@ async def run_evaluation_flow(is_modified: bool):
 
     print(f"\n[Step 3/3] Commencing evaluation flow (Shadow Mode: {'ON' if is_modified else 'OFF'})...")
     evaluator = DiagnosisAgent()
-    report, _ = await evaluator.evaluate(
+    report, _ = await evaluator.diagnosis(
         bot_id=BOT_ID,
         plan_markdown=plan_md,
         cases=raw_cases,

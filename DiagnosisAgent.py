@@ -33,7 +33,7 @@ You are now the "Shadow Chief Auditor." Your mission is to audit the primary jud
 - [Assigned Score]: {main_score}
 - [Justification]: {main_reason}
 
-### 4. Shadow Audit Task (Core: Article 6 of the selfevolve rubric - Evidence Chain Closure)
+### 4. Shadow Audit Task
 Determine if the primary judge committed a misjudgment or false positive to pander to user feedback:
 1. **Evidence Verification**: Does the error cited by the primary judge actually exist within the [Agent Response]?
 2. **Consistency Check**: Are the assigned score and the justification logically self-consistent?
@@ -71,7 +71,7 @@ Output the report in Markdown format structured exactly as follows:
 - You must include a Mermaid pie chart visualizing the execution success rate.
 - **Typical Case Analysis**: Contrast the specific point-of-view divergences between the primary judge and the shadow auditor on critical test cases.
 
-## 4. Actionable Remediation (Constrained by Article 10 of the selfevolve rubric)
+## 4. Actionable Remediation
 - **Generic recommendations are strictly prohibited**. You must formulate targeted optimization strategies mapped directly to the specific logical failures and domain-specific variances discovered during testing.
 
 ## 5. Task Fit & Conclusion
@@ -445,7 +445,7 @@ EVAL_PROMPTS = {
     - **Typical Case Analysis**: Isolate 1-2 representative test cases.
     - If shadow audit data is available, contrast the divergent opinions between both judges; otherwise, analyze the primary judge's diagnose in isolation.
 
-    ## 4. Actionable Remediation (Constrained by Article 10 of the selfevolve rubric)
+    ## 4. Actionable Remediation
     - **Generic recommendations are strictly prohibited**. Formulate targeted optimization strategies mapped directly to the specific logical failures, domain-specific variances, or performance bottlenecks discovered during this diagnose.
 
     ## 5. Task Fit & Conclusion
@@ -706,11 +706,24 @@ class DiagnosisAgent:
         for case in cases:
             ans, lat, raw = await _coze_ask_async(bot_id, case.get("input"), original=True)
             res_item = {"id": case.get("id"), "category": category, "input": case.get("input"), "output": ans, "latency_ms": lat, "score_key": score_key} # 记录 key
-            if raw and raw.get("error"):
-                res_item["main_audit"] = strategy["default_res"]
-                res_item["error_msg"] = raw.get("message")
-                results.append(res_item)
-                continue
+            if raw and isinstance(raw, dict) and raw.get("error"):
+                error_message = raw.get("message") or "Unspecified remote execution anomaly."
+                error_payload = {
+                    "timestamp": _now_iso_utc8(),
+                    "component": "DiagnosisAgent._run_standard_eval_block",
+                    "target_case_id": case.get("id"),
+                    "evaluation_dimension": category,
+                    "upstream_error_context": error_message
+                }
+                
+                print("\n[CRITICAL DEGRADATION DETECTED]")
+                print(json.dumps(error_payload, indent=4))
+                print("-" * 80 + "\n")
+
+                raise DiagnosisAgentRuntimeError(
+                    f"Upstream execution infrastructure failure for case '{case.get('id')}'. "
+                    f"Error Context: {error_message}"
+                )
             
             if strategy["prompt_key"]:
                 kwargs = self._get_prompt_kwargs(category, case.get("input"), ans, raw)
@@ -849,7 +862,7 @@ class DiagnosisAgent:
             plan_markdown: str, 
             cases: List[Dict], 
             planner_debug: Optional[Dict] = None, 
-            is_selfevolve_rubric_modified: bool = False
+            is_rubric_modified: bool = False
         ) -> Tuple[str, Dict]:
             """
             Execute Full Diagnose Workflow:
@@ -860,7 +873,7 @@ class DiagnosisAgent:
             if not bot_id or not cases: 
                 raise DiagnosisAgentRuntimeError("Parameters cannot be empty")
 
-            print(f"=== DiagnosisAgent: Starting Diagnose (Shadow Mode: {is_selfevolve_rubric_modified}) ===")
+            print(f"=== DiagnosisAgent: Starting Diagnose (Shadow Mode: {is_rubric_modified}) ===")
             
             buckets = {}
             for case in cases:
@@ -900,12 +913,12 @@ class DiagnosisAgent:
                     if cat not in titles:
                         titles[cat] = f"Specialized Diagnose for Custom Dimension ({cat})"
                 md, res = await self._run_standard_eval_block(
-                    bot_id, plan_markdown, buckets[cat], cat, run_shadow=is_selfevolve_rubric_modified
+                    bot_id, plan_markdown, buckets[cat], cat, run_shadow=is_rubric_modified
                 )
                 final_sections.append((titles.get(cat, f"Specialized {cat} Diagnose"), md))
                 details[cat.lower()] = res
                 
-                if is_selfevolve_rubric_modified:
+                if is_rubric_modified:
                     all_std_res.extend(res)
                     cat_sum = self._summarize_shadow_results(res)
                     category_summaries.append(f"- **{cat} Dimension Audit**: {cat_sum}")
@@ -916,7 +929,7 @@ class DiagnosisAgent:
             for title, body in final_sections:
                 clean_body = body.strip()
                 
-                if not is_selfevolve_rubric_modified:
+                if not is_rubric_modified:
                     clean_body = re.sub(r"## \d+\. Shadow Audit Compliance Analysis.*?(?=^## |\Z)", "", clean_body, flags=re.DOTALL | re.IGNORECASE | re.MULTILINE).strip()
                     
                     clean_body = re.sub(r"\s*\(.*?(?:selfevolve rubric|Shadow|Audit|Constraints|Article \w+).*?\)", "", clean_body, flags=re.IGNORECASE)
