@@ -10,8 +10,7 @@ Out-of-the-box support is currently fully optimized for the Coze platform.
 
 Create a `.env` file in the root directory of your project to configure the environment variables required for evaluation:
 
-、、、env
-# --- Coze Platform Configuration ---
+```env
 # Your Coze Personal Access Token
 COZE_PAT="your_coze_personal_access_token_here"
 # The unique ID of the target agent (Bot) you wish to test
@@ -21,7 +20,7 @@ BOT_ID="your_target_agent_id_here"
 # The API base URL and API key of your LLM provider
 API_BASE="https://api.your-provider.com/v1"
 API_KEY="your_llm_api_key_here"
-、、、
+```
 
 > **Note**: Make sure to add the `.env` file to your `.gitignore` to prevent any accidental leakage of your sensitive credentials.
 
@@ -32,16 +31,16 @@ API_KEY="your_llm_api_key_here"
 ### 1. Installation
 Ensure your local environment runs Python 3.9+. Execute the following command in the project root directory to install the required dependencies:
 
-、、、bash
+```bash
 pip install -r requirements.txt
-、、、
+```
 
 ### 2. Execution
 Run the primary script from your terminal to launch the interactive command-line interface:
 
-、、、bash
+```bash
 python main.py
-、、、
+```
 
 ### 3. Workflow & Operations
 
