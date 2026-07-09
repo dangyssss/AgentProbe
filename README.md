@@ -1,61 +1,60 @@
 # AgentProbe: LCNC Agent Automated Evaluation Framework
 
-AgentProbe is an automated testing and evaluation framework designed for Low-Code/No-Code (LCNC) agents. The framework addresses the evaluation gap faced by end-user developers by streamlining the workflow from requirement input to quantitative performance reporting. 
+AgentProbe is an automated testing and multi-dimensional evaluation tool specifically designed for Low-Code/No-Code (LCNC) agents. It streamlines the entire pipeline from inputting agent profiles to generating automated test cases, executing batch simulated interactions, and exporting visual evaluation reports, significantly enhancing the production quality and optimization efficiency of your agents.
 
-While the core architecture of AgentProbe is platform-agnostic and fully extensible for migration to other LCNC platforms, the current implementation provides out-of-the-box support for the Coze platform.
-
-## Features
-
-* **Automated Test Planning**: Generates multi-dimensional test plans derived directly from user-provided agent descriptions and testing requirements.
-* **Interactive Verification**: Displays the pre-test planning report in the terminal, allowing the user to verify and approve the test suite before execution.
-* **Structured Evaluation Reporting**: Executes the test cases automatically upon user confirmation and outputs a comprehensive evaluation report containing quantitative metrics and qualitative analysis.
+Out-of-the-box support is currently fully optimized for the Coze platform.
 
 ---
 
 ## Configuration
 
-Before executing AgentProbe, you must configure the environment variables for both platform authentication and the underlying multi-agent execution framework.
+Create a `.env` file in the root directory of your project to configure the environment variables required for evaluation:
 
-1. Create a `.env` file in the root directory of the project.
-2. Define the required credentials within the file:
-
-```env
+、、、env
 # --- Coze Platform Configuration ---
-# Your Personal Access Token (PAT) from Coze
+# Your Coze Personal Access Token
 COZE_PAT="your_coze_personal_access_token_here"
-# The specific ID of the target bot/agent you wish to audit
+# The unique ID of the target agent (Bot) you wish to test
 BOT_ID="your_target_agent_id_here"
 
-# --- MetaGPT Core Configuration ---
-# The underlying Multi-Agent framework relies on MetaGPT; configure your LLM provider here
+# --- LLM Core Configuration ---
+# The API base URL and API key of your LLM provider
 API_BASE="https://api.your-provider.com/v1"
 API_KEY="your_llm_api_key_here"
-```
+、、、
 
-*Note: Ensure the `.env` file is excluded from version control to protect your sensitive credentials.*
+> **Note**: Make sure to add the `.env` file to your `.gitignore` to prevent any accidental leakage of your sensitive credentials.
 
 ---
 
-## Usage
+## Quick Start
 
 ### 1. Installation
-Install the required dependencies using pip:
+Ensure your local environment runs Python 3.9+. Execute the following command in the project root directory to install the required dependencies:
 
-```bash
+、、、bash
 pip install -r requirements.txt
-```
+、、、
 
 ### 2. Execution
-Run the primary script from your terminal:
+Run the primary script from your terminal to launch the interactive command-line interface:
 
-```bash
+、、、bash
 python main.py
-```
+、、、
 
-### 3. Workflow Sequence
-Once initialized, AgentProbe guides you through the following pipeline via the command-line interface:
+### 3. Workflow & Operations
 
-* **Input Phase**: The terminal prompts you to enter the functional description of your target agent along with your specific testing requirements.
-* **Planning Phase**: AgentProbe analyzes the inputs to generate a multi-dimensional test plan, halting to request user confirmation.
-* **Testing Phase**: Upon receiving confirmation (e.g., `Y`), the program dispatches the automated test suite across the platform APIs.
-* **Reporting Phase**: After test execution completes, the final agent evaluation report is rendered directly in the terminal, with raw logs concurrently persisted to disk.
+Once the system is initialized, follow the terminal prompts to perform the operations below:
+
+#### Feature 1: Launch Automated Evaluation
+1. **Input Agent Profile**: Enter the core functionality or business positioning of your current agent (e.g., `Cross-Border E-Commerce Customer Assistant`).
+2. **Declare Testing Requirements**: Type in specific aspects you want to focus on for this run. If you wish to perform a comprehensive full-dimensional checkup, simply press Enter.
+3. **Preview Test Plan**: The framework will automatically reverse-engineer a suite of high-quality adversarial test cases. You can preview these questions directly in the terminal.
+4. **Confirm and Execute**: Type `y` or `yes` in the terminal. The system will automatically initiate high-concurrency asynchronous requests to perform batch simulation tests on your target Bot.
+5. **View Evaluation Report**: After the execution completes, a professional Markdown evaluation report will be generated and saved under the `outputs/` directory.
+
+#### Features 2-4: Rubric Evolution & Management
+* **Feature 2**: If you feel the current evaluation criteria are not rigorous enough, you can input your optimization suggestions. The system will automatically interpret them and upgrade the underlying evaluation rule repository.
+* **Feature 3**: Instantly roll back the evaluation rubric to the previous version with a single command.
+* **Feature 4**: Reset the evaluation rubric to factory settings (revert completely to the initial default rules)
