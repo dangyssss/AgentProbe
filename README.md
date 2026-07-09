@@ -11,6 +11,7 @@ Out-of-the-box support is currently fully optimized for the Coze platform.
 Create a `.env` file in the root directory of your project to configure the environment variables required for evaluation:
 
 ```env
+# --- Coze Platform Configuration ---
 # Your Coze Personal Access Token
 COZE_PAT="your_coze_personal_access_token_here"
 # The unique ID of the target agent (Bot) you wish to test
